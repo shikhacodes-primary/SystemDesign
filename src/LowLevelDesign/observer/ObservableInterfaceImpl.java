@@ -1,4 +1,4 @@
-package lld.observer;
+package LowLevelDesign.observer;
 
 import java.util.ArrayList;
 import java.util.List;

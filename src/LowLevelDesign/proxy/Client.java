@@ -1,4 +1,4 @@
-package lld.proxy;
+package LowLevelDesign.proxy;
 
 public class Client {
     public static void main(String[] args) {

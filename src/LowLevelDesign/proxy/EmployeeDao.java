@@ -1,4 +1,4 @@
-package lld.proxy;
+package LowLevelDesign.proxy;
 
 public interface EmployeeDao {
     void createEmployee(String client, Employee employee) throws Exception;

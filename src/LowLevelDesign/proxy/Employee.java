@@ -1,4 +1,4 @@
-package lld.proxy;
+package LowLevelDesign.proxy;
 
 public class Employee {
     private int employeeId;

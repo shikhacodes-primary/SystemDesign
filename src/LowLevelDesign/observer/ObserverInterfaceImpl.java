@@ -1,4 +1,4 @@
-package lld.observer;
+package LowLevelDesign.observer;
 
 public class ObserverInterfaceImpl implements ObserverInterface{
     String emailOfObserver;

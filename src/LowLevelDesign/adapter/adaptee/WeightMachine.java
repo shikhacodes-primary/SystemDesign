@@ -1,4 +1,4 @@
-package lld.adapter.adaptee;
+package LowLevelDesign.adapter.adaptee;
 
 public interface WeightMachine {
     double getWeightInPounds();

@@ -1,4 +1,4 @@
-package lld.adapter.adaptee;
+package LowLevelDesign.adapter.adaptee;
 
 public class WeightMachineImpl implements WeightMachine {
     @Override

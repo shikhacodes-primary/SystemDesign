@@ -1,8 +1,8 @@
-package lld.adapter;
+package LowLevelDesign.adapter;
 
-import lld.adapter.adaptee.WeightMachineImpl;
-import lld.adapter.adapter.WeightMachineAdapter;
-import lld.adapter.adapter.WeightMachineAdapterImpl;
+import LowLevelDesign.adapter.adaptee.WeightMachineImpl;
+import LowLevelDesign.adapter.adapter.WeightMachineAdapter;
+import LowLevelDesign.adapter.adapter.WeightMachineAdapterImpl;
 
 public class Client {
     public static void main(String[] args) {

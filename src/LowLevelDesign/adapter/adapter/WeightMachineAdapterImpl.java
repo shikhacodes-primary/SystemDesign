@@ -1,6 +1,6 @@
-package lld.adapter.adapter;
+package LowLevelDesign.adapter.adapter;
 
-import lld.adapter.adaptee.WeightMachine;
+import LowLevelDesign.adapter.adaptee.WeightMachine;
 
 public class WeightMachineAdapterImpl implements WeightMachineAdapter {
     WeightMachine weightMachine;

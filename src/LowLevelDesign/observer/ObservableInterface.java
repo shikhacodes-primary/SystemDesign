@@ -1,4 +1,4 @@
-package lld.observer;
+package LowLevelDesign.observer;
 
 public interface ObservableInterface {
     void addObserver(ObserverInterface observer);
