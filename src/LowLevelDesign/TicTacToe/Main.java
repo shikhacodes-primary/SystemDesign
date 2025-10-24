@@ -1,0 +1,9 @@
+package LowLevelDesign.TicTacToe;
+
+public class Main {
+    public static void main(String[] args) {
+        TicTacToe game = new TicTacToe();
+        game.initializeGame();
+        game.startGame();
+    }
+}
