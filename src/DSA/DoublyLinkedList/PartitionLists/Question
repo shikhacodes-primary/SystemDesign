@@ -1,0 +1,104 @@
+DLL: Partition List ( ** Interview Question)
+Write a method called partitionList that rearranges the nodes in a doubly linked list so that all nodes with values less than a given number x come before nodes greater than or equal to x.
+
+This must be done by relinking the existing nodes (not by creating new ones). The method should update both .next and .prev pointers correctly.
+
+The relative order of nodes within each partition must be preserved.
+
+
+
+
+
+📌 Example Inputs and Outputs:
+
+Input:  3 <-> 8 <-> 5 <-> 10 <-> 2 <-> 1, x = 5
+Output: 3 <-> 2 <-> 1 <-> 8 <-> 5 <-> 10
+
+Input: 1 <-> 2 <-> 3, x = 5
+Output: 1 <-> 2 <-> 3
+
+Input: 6 <-> 7 <-> 8, x = 5
+Output: 6 <-> 7 <-> 8
+
+
+
+
+📘 What This Exercise Is Designed to Teach
+
+How to traverse and manipulate nodes in a doubly linked list.
+
+Maintaining correct .prev and .next pointers while restructuring.
+
+Use of dummy nodes to simplify head handling.
+
+
+
+Hints:
+
+
+📋 Pseudocode Outline
+
+If head is null, return.
+
+Create two dummy nodes:
+- dummy1 for nodes < x
+- dummy2 for nodes >= x
+
+Create pointers:
+- prev1 to build dummy1's list
+- prev2 to build dummy2's list
+
+Loop through the original list:
+    If current node's value < x:
+        Append to dummy1's list
+    Else:
+        Append to dummy2's list
+    Move to next node
+
+Link the two lists:
+- prev1.next = dummy2.next
+- if dummy2.next exists, set dummy2.next.prev = prev1
+
+End dummy2’s list by setting prev2.next = null
+
+Set self.head = dummy1.next
+Set self.head.prev = null
+
+
+
+
+💡 Hints
+
+Use dummy nodes to simplify corner cases like head reassignment.
+
+Carefully update both next and prev pointers when moving nodes.
+
+Always terminate the final .next of the last node to avoid cycles.
+
+
+
+
+
+📊 Step-by-Step Example (Visual Walkthrough)
+
+Input:
+
+List: 3 <-> 8 <-> 5 <-> 10 <-> 2 <-> 1
+x = 5
+
+
+🔹 After separating:
+
+Dummy1 list: 3 <-> 2 <-> 1
+
+Dummy2 list: 8 <-> 5 <-> 10
+
+
+
+🔹 After merging:
+
+Result: 3 <-> 2 <-> 1 <-> 8 <-> 5 <-> 10
+All .prev pointers are correctly updated.
+
+
+
