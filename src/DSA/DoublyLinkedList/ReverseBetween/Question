@@ -1,0 +1,96 @@
+LL: Reverse Between ( ** Interview Question)
+Reverse a portion of a doubly linked list (DLL).
+
+Write a method that takes two indices (startIndex, endIndex) and reverses the nodes between those indices.
+
+The original list must be modified in place.
+
+
+
+Constraints:
+
+startIndex and endIndex are zero-based.
+
+The list may be empty or contain a single node.
+
+If startIndex == endIndex, no changes should occur.
+
+You must maintain the integrity of both next and prev pointers.
+
+
+
+📘 What This Exercise Is Designed to Teach
+
+How to traverse and manipulate a doubly linked list.
+
+How to reverse a sublist in-place by relinking nodes.
+
+Safe pointer handling for both next and prev in a DLL.
+
+
+
+
+=============
+Hints:
+
+Pseudocode Outline
+
+1. Return if the list is empty or has 1 element or indices are equal
+
+2. Create a dummy node and link it before the head
+
+3. Traverse to the node at startIndex - 1 (call it "prev")
+
+4. Initialize current to prev.next
+
+5. For (endIndex - startIndex) times:
+
+    a. Store node_to_move = current.next
+
+    b. Remove node_to_move from list
+
+    c. Insert node_to_move right after prev
+
+6. Update head in case head was affected
+
+7. Remove dummy linkage
+
+
+
+
+
+💡 Hints
+
+Use a dummy node to simplify operations near the head.
+
+Only the nodes between startIndex and endIndex should move.
+
+Think of "cutting" the next node and "inserting" it earlier in the list.
+
+After each iteration, current remains the anchor of the sublist.
+
+Don’t forget to fix both next and prev for moved nodes.
+
+
+
+
+
+📊 Step-by-Step Example (Visual Walkthrough)
+
+Input DLL:
+3 <-> 8 <-> 5 <-> 10 <-> 2 <-> 1
+
+Call: reverseBetween(1, 3)
+
+We want to reverse the sublist: 8, 5, 10 → becomes 10, 5, 8
+
+Process:
+
+Anchor = prev = 3, current = 8
+
+First pass: move 5 after 3: 3 <-> 5 <-> 8 <-> 10 ...
+
+Second pass: move 10 after 3: 3 <-> 10 <-> 5 <-> 8 ...
+
+Final DLL:
+3 <-> 10 <-> 5 <-> 8 <-> 2 <-> 1
